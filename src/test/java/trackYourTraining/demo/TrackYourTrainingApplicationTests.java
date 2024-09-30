@@ -1,10 +1,10 @@
-package com.example.atletiek_fribourg;
+package trackYourTraining.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AtletiekFribourgApplicationTests {
+class TrackYourTrainingApplicationTests {
 
 	@Test
 	void contextLoads() {

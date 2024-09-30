@@ -1,10 +1,12 @@
-package com.example.atletiek_fribourg.service;
+package trackYourTraining.demo.service;
 
-import com.example.atletiek_fribourg.Dto.TrainingDto;
-import com.example.atletiek_fribourg.domain.Training;
-import com.example.atletiek_fribourg.repository.TrainingRepository;
+
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import trackYourTraining.demo.Dto.TrainingDto;
+import trackYourTraining.demo.domain.Training;
+import trackYourTraining.demo.repository.TrainingRepository;
 
 import java.util.Date;
 import java.util.List;
@@ -30,7 +32,7 @@ public class TrainingService {
         trainingRepository.save(training);
     }
 
-    public Training getTrainingByDate( String date){
+    public Training getTrainingByDate(String date){
         return trainingRepository.findByDatum(date);
     }
 

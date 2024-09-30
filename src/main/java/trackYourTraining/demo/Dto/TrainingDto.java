@@ -1,4 +1,4 @@
-package com.example.atletiek_fribourg.Dto;
+package trackYourTraining.demo.Dto;
 
 import lombok.Builder;
 import lombok.Data;

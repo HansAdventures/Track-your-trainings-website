@@ -1,4 +1,4 @@
-package com.example.atletiek_fribourg.domain;
+package trackYourTraining.demo.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

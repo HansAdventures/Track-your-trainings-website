@@ -1,8 +1,9 @@
-package com.example.atletiek_fribourg.repository;
+package trackYourTraining.demo.repository;
 
-import com.example.atletiek_fribourg.domain.Training;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import trackYourTraining.demo.domain.Training;
 
 import java.util.Date;
 import java.util.List;

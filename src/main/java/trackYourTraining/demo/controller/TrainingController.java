@@ -1,12 +1,13 @@
-package com.example.atletiek_fribourg.controller;
+package trackYourTraining.demo.controller;
 
-import com.example.atletiek_fribourg.Dto.TrainingDto;
-import com.example.atletiek_fribourg.domain.Training;
-import com.example.atletiek_fribourg.service.TrainingService;
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import trackYourTraining.demo.Dto.TrainingDto;
+import trackYourTraining.demo.domain.Training;
+import trackYourTraining.demo.service.TrainingService;
 
 @AllArgsConstructor
 @Controller
