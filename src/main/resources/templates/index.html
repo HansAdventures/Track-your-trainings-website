@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homescreen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link  th:href="@{/reset.css}"  rel="stylesheet" />
+    <link  th:href="@{/main.css}" rel="stylesheet" />
+    <link  th:href="@{/index.css}" rel="stylesheet" />
+
+
+</head>
+    <body>
+
+    <!--The header-->
+       <header class ="header-main">
+            <div class="header-main-logo">
+                <img th:src="@{/img/logo.png}">
+                <nav class="header-main-nav">
+                    <ul>
+                        <li><a th:href="@{index}">Home</a></li>     <!--th:href gebruiken als je wilt verwijzen naar een pagina in ons website-->
+                        <li><a th:href="@{add}">New training</a></li>
+                        <li><a th:href="@{about}">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-main-sm">
+                <a target="_blank" href="https://www.facebook.com"><div class="header-main-sm-fb"></div></a> <! target= "_blank" takes the link to a new tab>
+                <a target="_blank" href="https://www.instagram.com"><div class="header-main-sm-in"></div></a>
+                <a target="_blank" href="https://www.github.com"><div class="header-main-sm-gh"></div></a>
+            </div>
+        </header>
+
+    <!-- This is the hero section   -->
+        <main>
+            <div class="main-intro">
+                <h1>track <br> Analyse<br> Perform Better</h1>
+                <p>Track your workouts, get insights and<br> optimize your performance with data-driven suggestions.<br> </p>
+                <p> Our system helps you stay organized,<br> understand your progress and achieve better results.</p>
+                <div class="main-intro-links">
+                    <a href="#">START NOW</a>
+                    <a href="#">LOG IN</a>
+                </div>
+                
+            </div>
+            <div class="main-quotes">
+                <p>“We often overestimate how often we do things, <br> but tracking eliminates this weakness.<br> When we track we just have the facts,<br> not our subjective reflections.” <br><br>-Betsy Ramser Jaime</p>
+                <p>“If we don’t measure the right things, and don’t set the right goals, <br> how will we know if we are doing the right thing?” <br><br>-Arvind Ashok</p>
+
+            </div>
+        </main>
+
+    <!-- This is the category section   -->
+        <section class="index-category">
+            <p>How does it work?</p>
+            <div class="index-category-fiches">
+                <div class="index-category-fiches-box">
+                    <img class="index-category-fiches-box-img" th:src="@{/img/typing_cartoon.png}" alt="inserting training">
+                    <h3>Insert</h3>
+                    <p>Tracking your workouts in our app is quick and easy. With just a few taps, you can log exercises, sets, reps, and weights. Monitor your progress effortlessly and stay on top of your fitness goals. </p>
+                </div>
+                <div class="index-category-fiches-box">
+                    <img class="index-category-fiches-box-img" th:src="@{/img/vergrootglas.png}" alt="analyse vergootglas">
+                    <h3>Analyse</h3>
+                    <p>The app automatically analyzes your workout data, so you don't have to do a thing. It tracks trends, highlights improvements, and gives you insights into your performance, helping you stay on top of your goals without any extra effort.</p>
+                </div>
+                <div class="index-category-fiches-box">
+                    <img class="index-category-fiches-box-img" th:src="@{/img/bliksemschicht.png}" alt="perform bliksemschicht">
+                    <h3>perform better</h3>
+                    <p>Perform the suggestions and see the improvements yourself</p>
+                </div>
+                
+            </div> 
+            <div class="index-category-link">
+                <a href="#">LEARN MORE</a>
+            </div>   
+            
+            
+            
+
+        </section>
+
+
+    </body>
+</html>

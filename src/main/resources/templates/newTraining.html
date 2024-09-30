@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link  th:href="@{/reset.css}"  rel="stylesheet" />
+    <link  th:href="@{/main.css}" rel="stylesheet" />
+    <link  th:href="@{/newTraining.css}" rel="stylesheet" />
+
+
+</head>
+    <body>
+    
+       <header class ="header-main">
+            <div class="header-main-logo">
+                <img th:src="@{/img/logo.png}">
+                <nav class="header-main-nav">
+                    <ul>
+                        <li><a th:href="@{index}">Home</a></li>
+                        <li><a th:href="@{add}">New training</a></li>
+                        <li><a th:href="@{about}">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-main-sm">
+                <a target="_blank" href="https://www.facebook.com"><div class="header-main-sm-fb"></div></a> <! target= "_blank" takes the link to a new tab>
+                <a target="_blank" href="https://www.instagram.com"><div class="header-main-sm-in"></div></a>
+                <a target="_blank" href="https://www.github.com"><div class="header-main-sm-gh"></div></a>
+            </div>
+        </header>
+
+     
+
+        <section class="section-main">
+            <form method="post" role="form" th:action="@{/api/training/add}" th:object="${training}">
+                <div class="section-main-input">
+                    <div class="section-main-left">
+                        <div class="form-group1 mb-3">
+                            
+                            <label class="form-label" for="datum">Datum:</label> <!-- You use 'for' so that if you click on the label, you will be directed to the ouput-->
+                            <input id="datum" name="datum" placeholder="Wat was de datum?" th:field="*{datum}" type="date"/>
+                            
+                            <p th:errors = "*{datum}" class="text-danger"
+                            th:if="${#fields.hasErrors('datum')}"></p>
+                        </div>
+            
+                        <div class="form-group2 mb-3">
+                            <label class="form-label" for="opwarming">Opwarming:</label>
+                            <br> <!-- This is called a 'break'. Used to allign the label and the input/textarea.-->
+                            <label for="opwarming"></label>
+                            <textarea class="form-control" id="opwarming" name="opwarming" placeholder="Wat was de opwarming?" th:field="*{opwarming}" type="text"></textarea>
+                            <br>
+                            <p th:errors = "*{opwarming}" class="text-danger"
+                            th:if="${#fields.hasErrors('opwarming')}"></p>
+                        </div>
+                        <div class="form-group3 mb-3">
+                            <label class="form-label" for="gevoelOpwarming">Het gevoel van de opwarming:</label>
+                            <br>
+                            <input class="form-control" id="gevoelOpwarming" name="gevoelOpwarming" placeholder="Wat was jou gevoel bij de opwarming?" th:field="*{gevoelOpwarming}" type="text"></input>
+                            <br>
+                            <p th:errors = "*{gevoelOpwarming}" class="text-danger"
+                            th:if="${#fields.hasErrors('gevoelOpwarming')}"></p>
+                        </div>
+                    </div>
+                    <div class="section-main-right">
+                        <div class="form-group1 mb-3">
+                            <label class="form-label" for="specifiekOnderdeel">De training:</label>
+                            <input class="form-control" id="specifiekOnderdeel" name="specifiekOnderdeel" placeholder="Welk soort training was het?" th:field="*{specifiekOnderdeel}" type="text" ></input>
+                            <p th:errors = "*{specifiekOnderdeel}" class="text-danger"
+                            th:if="${#fields.hasErrors('specifiekOnderdeel')}"></p>
+                        </div>
+            
+                        <div class="form-group2 mb-3">
+                            <label class="form-label" for="specifiekOnderdeellUitleg">De onderdelen van de training:</label>
+                            <br>
+                            <textarea class="form-control" id="specifiekOnderdeellUitleg" name="specifiekOnderdeelUitleg" placeholder="Wat was de training?" th:field="*{specifiekOnderdeelUitleg}" type="text"></textarea>
+                            <br>
+                            <p th:errors = "*{specifiekOnderdeelUitleg}" class="text-danger"
+                            th:if="${#fields.hasErrors('specifiekOnderdeelUitleg')}"></p>
+                        </div>
+            
+                        <div class="form-group3 mb-3">
+                            <label class="form-label" for="gevoelSpecifiekOnderdeel">Het gevoel van de training:</label>
+                            <br>
+                            <input class="form-control" id="gevoelSpecifiekOnderdeel" name="gevoelSpecifiekOnderdeel" placeholder="Wat was jouw gevoel bij de opwarming?" th:field="*{gevoelSpecifiekOnderdeel}" type="text"></input>
+                            <br>
+                            <p th:errors = "*{gevoelSpecifiekOnderdeel}" class="text-danger"
+                            th:if="${#fields.hasErrors('gevoelSpecifiekOnderdeel')}"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-main-button">
+                    <button class="btn btn-primary" type="submit">Sla deze training op</button>
+                </div>
+                
+    
+                
+                
+            </form>
+        </section>
+
+    </body>
+</html>

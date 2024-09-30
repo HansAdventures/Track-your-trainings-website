@@ -1,0 +1,170 @@
+main{
+    width: 100%; /*main takes the whole width in*/
+    height: calc(100vh - 60px); /*This solves the problem with the navigation bar. This line en next line*/
+    margin-top: 60px;
+    background-color: #e1E1E1 ;
+    background-image: url(running_hero_section-removebg-preview.png) ; /*url(background_herosection_gray_red.jpg); loads the 2 images*/
+    background-size: 120vh; /*first size is for the first url, second size is for the second url.*/
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;  /*This makes a flexbox of the main content--> next to each other*/
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+main .main-intro{
+    padding-bottom: 12vh;
+    padding-left: 10vh;
+}
+
+main .main-intro h1{ /*targets the slogan*/
+    font-size: 50px;
+    line-height: 50px; /*Sets how much space there is between the words in the h1.*/
+    padding-bottom: 15px;
+    
+}
+
+main .main-intro p{ /*targets all the paragraph from the intro block*/ 
+    font-size: 18px;
+    line-height: 25px;
+}
+
+main .main-intro-links{
+    display: flex;
+    
+}
+
+main a{ /*targets the button*/
+    margin-top: 30px; /*Pushes it down, more space between paragraph and button.*/
+    margin-right: 30px;
+    font-size: 18px;
+    display: block; /*Regonizes the paragraph block above*/
+    background-color: var(--site-color-01);
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 10px; /* makes the edges round*/
+    
+
+}
+
+main a:hover{
+    background-color: var(--site-color-01-hover); /*Changes color when you hover over the button*/
+    scale: 1.05; /*Makes the button bigger when you hover*/
+}
+
+main .main-quotes p{
+    font-size: 18px;
+    line-height: 20px;
+    border-left: 4px solid var(--site-color-01); /*Makes a solid vertical line*/
+    padding-left: 20px; /*Makes space for the paragraph and the line.*/
+    margin: 40px 0; /*Makes 2 lines*/
+}
+
+main .main-quotes p:nth-child(1){   /*This targets the first paragraph*/
+    margin-left: 80px;
+}
+
+main .main-intro{
+    position: relative ;
+    right: 10vh;
+
+}
+
+main .main-quotes{
+    position: relative;
+    left: 20vh;
+    padding-bottom: 15vh;
+}
+
+/* CATEGROY SECTION */
+
+.index-category{ /*This targets the whole section part*/
+    width: 100%;
+    padding: 60px 0px 30px 0px;
+    background-color: var(--site-color-03);
+    
+    
+}
+
+
+.index-category p {
+    color: #111;
+    text-align: center;
+    padding-bottom: 30px;
+    flex-basis: 100%;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.index-category-fiches{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    flex-wrap: wrap ;
+}
+
+
+
+.index-category-fiches-box{
+    background-color: var(--site-color-02); 
+    background-size:  cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    
+}
+
+.index-category-fiches-box-img{
+    width: 320px;
+    height: 190px;
+    margin-left: 30px;
+    padding-top: 10px;
+    
+    
+}
+
+/* .index-category-fiches-box:nth-child(1){} Targets the first box */
+
+
+.index-category-fiches-box h3{
+    padding-top: 50px;    
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-shadow: -2px 2px 4px #fff;
+}
+
+.index-category-fiches-box p{
+    padding-top: 30px;
+    
+    color: var(--site-color-01-hover);
+}
+
+.index-category-link{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 30px 20px;
+    font-size: 18px;
+    display: block; /*Regonizes the paragraph block above*/
+    background-color: var(--site-color-01);
+    border-radius: 10px; /* makes the edges round*/
+    
+}
+
+.index-category-link:hover{
+    background-color: var(--site-color-01-hover); /*Changes color when you hover over the button*/
+    scale: 1.05; /*Makes the button bigger when you hover*/
+    cursor: pointer;
+}
+

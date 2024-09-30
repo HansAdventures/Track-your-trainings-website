@@ -1,0 +1,69 @@
+
+.main-about{
+    width: 100%; /*main takes the whole width in*/
+    height: calc(100vh - 60px); /*This solves the problem with the navigation bar. This line en next line*/
+    margin-top: 60px;
+    background-color: var(--site-color-04) ;
+    display: flex;
+    justify-content: baseline;
+    
+    
+   
+
+}
+
+.main-about-img{
+    width: 50%;
+    height: calc(100vh - 60px);
+    display: flex  ;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 50px ;
+}
+
+.main-about-img img{
+    height: 600px  ;
+}
+
+.main-about-info a { 
+    max-width: fit-content;
+    margin-top: 35px;
+    padding: 10px;
+    display: block; /*Regonizes the paragraph block above*/
+    background-color: var(--site-color-01);
+    border-radius: 10px; /* makes the edges round*/
+}
+
+.main-about-info a:hover {
+    background-color: var(--site-color-01-hover); /*Changes color when you hover over the button*/
+    scale: 1.05; /*Makes the button bigger when you hover*/
+}
+
+
+.main-about-info{
+    height: calc(100vh - 60px);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+h1{
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: var(--site-color-01);
+}
+
+p{
+    font-size: 17px;
+    line-height: 22px;
+    word-wrap: break-word;
+}
+

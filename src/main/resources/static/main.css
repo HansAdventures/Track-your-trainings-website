@@ -1,0 +1,176 @@
+html{ /*Targets everyting in the html-file, it can be used from everywhere in the html-file*/
+    --site-color-01: #e73725;    /*'--' creates a variable that can be accessed by var(--'name')*/
+    --site-color-01-hover:  #dd6356;
+    --site-color-02: #dedede;
+    --site-color-03: #fff;
+    --site-color-04: #e1e1e1;
+    --menubar-color: #fff;
+}
+/*
+html{
+    font-size: 62.5%;   /*Standard is 16px. But in order to work easily with REM, we shrink it down to 10px. (62.5% of 16px is 10px)*/
+                        /*So if we want an h1 of 45px, we fill in 4.5rem*/
+
+
+
+
+body{
+    background-color: var(--site-color-04);
+}
+
+body:after{     /*This loads the two photos that are used in hover mode. it makes sure that their not visible till you hover on the icon.*/
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index:  -1;
+    content: url(img/facebook.png) url(img/instagram.png) url(img/github_blue.png);
+
+}
+
+h1 { /*Style for h1*/
+    font-size: 26px;
+    line-height: 32px;
+    color: #010000;
+    font-family: Roboto, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 26px;
+    line-height: 32px;
+    color: #010000;
+    font-family: Roboto, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+p { /*Style for p*/
+    font-size: 14px;
+    line-height: 18px;
+    color: #010000;
+    font-family: "Roboto", serif;
+   
+}
+
+a { /*Style for a*/
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    font-family: "Roboto", serif;
+    cursor: pointer;
+}
+
+
+
+.header-main {
+    position: fixed; /*fixs the content to the screen on that postion*/ /*menu bar is always visible even if you scroll*/
+    top: 0; /*fixs the content to the top of the screen*/
+    width: 100%; /*header takes up the full lenght page*/
+    height: 60px;
+    background-color: var(--menubar-color);
+    display: flex; /* puts the blocks next to each other*/ /*This is the main (x) axis*/
+    justify-content: space-between; /*  puts blocks with the same distance in the header*/ /*This is the cross (y) axis*/
+    z-index: 1000;
+    border-bottom: 4px solid var(--site-color-01);
+
+.header-main-logo {
+    width: fit-content; /* block will be as long as his content*/
+    height: 100%;
+    padding-left: 60px;
+    display: flex;
+    
+}
+
+}
+.header-main-logo img{
+    height: 56px;
+    align-self: center; /*centers the image*/
+}
+
+
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+    
+}
+
+.header-main-nav ul{
+    list-style: none; /* removes bulletpoints*/
+    margin-left: 30px;
+}
+
+.header-main-nav ul li{
+    display: inline; /* puts the content next to each other*/
+    float: left; /* puts the content really next to eachtother with no space*/
+
+}
+
+.header-main-nav ul li a{ /* this adresses the text itself*/
+    padding: 0 10px; /* create space around content; padding: boven, rechts, onder, links*/
+    font-family: "Roboto", sans-serif;
+    line-height: 60px; /*centers the content*/
+        /*whenever you set the line-height to the full height of it's container, it centers the text*/
+    color: #000;
+    display: block; /* makes each object in list a block*/
+    height: 100%; /*so you can also click below the text*/
+}
+
+.header-main-nav ul li a:hover{ 
+    color: var(--site-color-01-hover);    
+}
+
+.header-main-sm {
+    width: fit-content;
+    height: 100%;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.header-main-sm-fb{
+    width: 20px;
+    height: 20px;
+    background-image: url(img/facebook_black.png);
+    background-repeat:  no-repeat;
+    background-size: cover;
+    
+}
+
+.header-main-sm-fb:hover{
+    background-image: url(img/facebook.png);
+
+}
+
+.header-main-sm-in{
+    width: 20px;
+    height: 20px;
+    background-image: url(img/instagram_black.png);
+    background-repeat:  no-repeat;
+    background-size: cover;
+}
+.header-main-sm-in:hover{
+    background-image: url(img/instagram.png);
+     
+}
+
+.header-main-sm-gh{
+    width: 20px;
+    height: 20px;
+    background-image: url(img/github_black.png);
+    background-repeat:  no-repeat;
+    background-size: cover;
+}
+.header-main-sm-gh:hover{
+    background-image: url(img/github_blue.png);
+     
+}
+
+
+
+
+
+

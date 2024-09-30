@@ -1,0 +1,104 @@
+
+
+.section-main{
+    display: flex;
+    height: calc(100vh - 60px); /*This solves the problem with the navigation bar. This line en next line*/
+    margin-top: 60px;
+    
+}
+
+section form{
+    width: 100%;
+    
+}
+
+.section-main-input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+    padding-top: 30px;
+    
+}
+
+.section-main-left{
+    
+    width: 400px;
+}
+
+.section-main-right{
+    
+    width: 400px; 
+}
+
+.form-label{
+    line-height: 25px;
+}
+
+.form-group1{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 50px;
+
+}
+
+.form-group2{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 200px;
+
+}
+
+.form-group3{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.section-main-button{
+    display: flex;
+    justify-content: center;
+    
+}
+
+textarea, input{
+    border: 2px solid #656565; /*creates a border around the textarea/input. This was all gone due to the reset.css file.*/
+    width: 380px;
+}
+
+textarea{
+    height: 200px;
+}
+input{
+    height: 50px;
+}
+
+textarea:focus,     /*Focus is een sudo class. When we click, the code is below is executed.*/
+input:focus{
+    outline: 1px solid var(--site-color-01); /*It makes the outline blue when we click*/
+}
+
+
+
+button{
+    background-color: var(--site-color-01);
+    font-size: 14px;
+    font-family: "Roboto", serif;
+}
+
+button:hover {  /*when you hover over the button, 1) the color will change; 2)the cusor will be a pointer*/
+    background-color: var(--site-color-01-hover); 
+    cursor: pointer;
+    scale: 1.05;
+    
+}
+
+
+
+
+input[type=text],
+textarea,
+select,
+button{ 
+    padding: 10px; /*the button will appear bigger*/
+    border-radius: 10px; /* makes the edges round*/
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link  th:href="@{/reset.css}"  rel="stylesheet" />
+    <link  th:href="@{/main.css}" rel="stylesheet" />
+    <link  th:href="@{/about.css}" rel="stylesheet" />
+
+
+</head>
+    <body>
+
+    <!--The header-->
+       <header class ="header-main">
+            <div class="header-main-logo">
+                <img th:src="@{/img/logo.png}">
+                <nav class="header-main-nav">
+                    <ul>
+                        <li><a th:href="@{index}">Home</a></li>
+                        <li><a th:href="@{add}">New training</a></li>
+                        <li><a th:href="@{about}">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-main-sm">
+                <a target="_blank" href="https://www.facebook.com"><div class="header-main-sm-fb"></div></a> <! target= "_blank" takes the link to a new tab>
+                <a target="_blank" href="https://www.instagram.com"><div class="header-main-sm-in"></div></a>
+                <a target="_blank" href="https://www.github.com"><div class="header-main-sm-gh"></div></a>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-about">
+                <div class="main-about-img">
+                    <img th:src="@{/img/man_aboutme.png}" alt="man about me">
+                </div>
+                <div class="main-about-info">
+                    <h1>Hello, I'm Hans Vercruysse </h1>
+                    <h2>Masterstudent Data Analytics</h2>
+                    <p>sdjslkfjskjfksjfkjskdfjksdjfdjdfkjdfkjsdkfjskqdjfqsdjfqsdjflqsdjflqsdjfqsmdjfklmqsdjfkqsjdmfjsqldfjksqdjflmqsjdlfkjsqdmfjsqkdfjqskdfjlqsjf</p>
+                    <a href="#">Get in touch!</a>
+                    <p>hans.vercruysse@telenet.be</p>
+                    
+                </div>
+            </div>
+        </main>
+
+
+
+
+    </body>
+</html>
