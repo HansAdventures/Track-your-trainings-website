@@ -20,15 +20,15 @@ main .main-intro{
 }
 
 main .main-intro h1{ /*targets the slogan*/
-    font-size: 50px;
-    line-height: 50px; /*Sets how much space there is between the words in the h1.*/
+    font-size: 5.0rem;
+    line-height: 1.25; /*Sets how much space there is between the words in the h1.*/
     padding-bottom: 15px;
     
 }
 
 main .main-intro p{ /*targets all the paragraph from the intro block*/ 
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.8rem;
+    line-height: 1.5;
 }
 
 main .main-intro-links{
@@ -39,7 +39,7 @@ main .main-intro-links{
 main a{ /*targets the button*/
     margin-top: 30px; /*Pushes it down, more space between paragraph and button.*/
     margin-right: 30px;
-    font-size: 18px;
+    font-size: 1.8rem;
     display: block; /*Regonizes the paragraph block above*/
     background-color: var(--site-color-01);
     padding: 10px 20px;
@@ -55,8 +55,8 @@ main a:hover{
 }
 
 main .main-quotes p{
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 1.8rem;
+    line-height: 1.6;
     border-left: 4px solid var(--site-color-01); /*Makes a solid vertical line*/
     padding-left: 20px; /*Makes space for the paragraph and the line.*/
     margin: 40px 0; /*Makes 2 lines*/
@@ -95,7 +95,7 @@ main .main-quotes{
     padding-bottom: 30px;
     flex-basis: 100%;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 .index-category-fiches{
@@ -137,8 +137,8 @@ main .main-quotes{
 
 .index-category-fiches-box h3{
     padding-top: 50px;    
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 4.0rem;
+    line-height: 1.25;
     text-align: center;
     text-shadow: -2px 2px 4px #fff;
 }
@@ -155,7 +155,7 @@ main .main-quotes{
     margin-right: auto;
     margin-top: 30px;
     padding: 30px 20px;
-    font-size: 18px;
+    font-size: 1.8rem;
     display: block; /*Regonizes the paragraph block above*/
     background-color: var(--site-color-01);
     border-radius: 10px; /* makes the edges round*/
@@ -167,4 +167,85 @@ main .main-quotes{
     scale: 1.05; /*Makes the button bigger when you hover*/
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px){
+
+    main{
+        align-items: flex-end;
+    }
+    main .main-intro{
+        margin: 0 auto;
+        padding-bottom: 40vh;
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+
+    main .main-intro h1{ /*targets the slogan*/
+        font-size: 4.0rem;
+        line-height: 1.25; /*Sets how much space there is between the words in the h1.*/
+        text-align: center;
+        justify-content: flex-start;
+
+    }
+
+    main .main-intro p{ /*targets all the paragraph from the intro block*/
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    main .main-intro-links{
+        display: flex;
+
+    }
+
+    main a{ /*targets the button*/
+        margin-top: 30px; /*Pushes it down, more space between paragraph and button.*/
+        margin-right: 30px;
+        font-size: 1.8rem;
+        display: block; /*Regonizes the paragraph block above*/
+        background-color: var(--site-color-01);
+        padding: 10px 20px;
+        width: fit-content;
+        border-radius: 10px; /* makes the edges round*/
+
+
+    }
+
+    main a:hover{
+        background-color: var(--site-color-01-hover); /*Changes color when you hover over the button*/
+        scale: 1.05; /*Makes the button bigger when you hover*/
+    }
+
+    main .main-quotes p{
+        font-size: 1.8rem;
+        line-height: 1.6;
+        border-left: 4px solid var(--site-color-01); /*Makes a solid vertical line*/
+        padding-left: 20px; /*Makes space for the paragraph and the line.*/
+        margin: 40px 0; /*Makes 2 lines*/
+    }
+
+    main .main-quotes p:nth-child(1){   /*This targets the first paragraph*/
+        margin-left: 80px;
+    }
+
+    main .main-intro{
+        position: relative ;
+        right: 10vh;
+
+    }
+
+    main .main-quotes{
+        position: relative;
+        left: 20vh;
+        padding-bottom: 15vh;
+    }
+
+    main .main-quotes{
+        display: none;
+    }
+}
+
 

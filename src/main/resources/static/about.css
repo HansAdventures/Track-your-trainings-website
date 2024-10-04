@@ -52,18 +52,18 @@
 h1{
     margin-bottom: 10px;
     font-size: 50px;
-    line-height: 50px;
+    line-height: 1.25;
 }
 
 h2{
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 3.0rem;
     color: var(--site-color-01);
 }
 
 p{
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 1.7rem;
+    line-height: 1.5;
     word-wrap: break-word;
 }
 
