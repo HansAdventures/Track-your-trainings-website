@@ -19,17 +19,24 @@ public class TrainingService {
 
     public void addNewTraining (TrainingDto.TrainingAddrequest request){
         Training training = Training.builder()
-                .datum(request.getDatum())
+                .datum(changeDate(request))
                 .opwarming(request.getOpwarming())
                 .gevoelOpwarming(request.getGevoelOpwarming())
-                .specifiekOnderdeel(request.getSpecifiekOnderdeel())
-                .specifiekOnderdeelUitleg((request.getSpecifiekOnderdeelUitleg()))
-                .gevoelSpecifiekOnderdeel(request.getGevoelSpecifiekOnderdeel())
+                .soortTraining(request.getSoortTraining())
+                .uitlegTraining((request.getUitlegTraining()))
+                .gevoelTraining(request.getGevoelTraining())
 
 //                .trainer(request.getTrainer())
 //                .feedback(request.getFeedback())
                 .build();
         trainingRepository.save(training);
+    }
+
+    public String changeDate(TrainingDto.TrainingAddrequest request){
+        String date = request.getDatum();
+        String[] splitDate = date.split("-");
+
+        return (splitDate[2]+"-"+splitDate[1]+"-"+splitDate[0]);
     }
 
     public Training getTrainingByDate(String date){

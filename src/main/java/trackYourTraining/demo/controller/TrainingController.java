@@ -1,13 +1,17 @@
 package trackYourTraining.demo.controller;
 
 
+import jakarta.mail.MessagingException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import trackYourTraining.demo.Dto.TrainingDto;
 import trackYourTraining.demo.domain.Training;
+import trackYourTraining.demo.service.EmailService;
 import trackYourTraining.demo.service.TrainingService;
+
+import java.io.IOException;
 
 @AllArgsConstructor
 @Controller
@@ -15,13 +19,16 @@ import trackYourTraining.demo.service.TrainingService;
 public class TrainingController {
 
     private final TrainingService trainingService;
+    private EmailService emailService;
 
 
 
-    @PostMapping("/add")
-    public String register(@ModelAttribute("training") TrainingDto.TrainingAddrequest request){
+    @PostMapping(path = "/add")
+    public String register(@ModelAttribute("training") TrainingDto.TrainingAddrequest request) throws MessagingException, IOException {
+
         trainingService.addNewTraining(request);
-        return "redirect:/api/training/add";
+        emailService.sendMailWithThymleaf("hans.vercruysse@telenet.be", "training added", request);
+        return "redirect:/api/index";
     }
 
     @GetMapping("/add")
@@ -31,7 +38,7 @@ public class TrainingController {
     }
 
     @GetMapping("/index")
-    public String showIdex(){
+    public String showIndex(){
         return ("index");
     }
 

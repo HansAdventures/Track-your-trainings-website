@@ -37,7 +37,7 @@
      
 
         <section class="section-main">
-            <form method="post" role="form" th:action="@{/api/training/add}" th:object="${training}">
+            <form method="post" role="form" th:action="@{/api/add}" th:object="${training}">
                 <div class="section-main-input">
                     <div class="section-main-left">
                         <div class="form-group1 mb-3">
@@ -52,16 +52,16 @@
                         <div class="form-group2 mb-3">
                             <label class="form-label" for="opwarming">Opwarming:</label>
                             <br> <!-- This is called a 'break'. Used to allign the label and the input/textarea.-->
-                            <label for="opwarming"></label>
-                            <textarea class="form-control" id="opwarming" name="opwarming" placeholder="Wat was de opwarming?" th:field="*{opwarming}" type="text"></textarea>
+                            <label for="opwarming">Wat was de opwarming?</label>
+                            <textarea class="form-control" id="opwarming" name="opwarming" placeholder="" th:field="*{opwarming}" type="text"></textarea>
                             <br>
                             <p th:errors = "*{opwarming}" class="text-danger"
                             th:if="${#fields.hasErrors('opwarming')}"></p>
                         </div>
                         <div class="form-group3 mb-3">
-                            <label class="form-label" for="gevoelOpwarming">Het gevoel van de opwarming:</label>
+                            <label class="form-label" for="gevoelOpwarming">Wat was jou gevoel bij de opwarming?</label>
                             <br>
-                            <input class="form-control" id="gevoelOpwarming" name="gevoelOpwarming" placeholder="Wat was jou gevoel bij de opwarming?" th:field="*{gevoelOpwarming}" type="text"></input>
+                            <input class="form-control" id="gevoelOpwarming" name="gevoelOpwarming" placeholder="" th:field="*{gevoelOpwarming}" type="text"></input>
                             <br>
                             <p th:errors = "*{gevoelOpwarming}" class="text-danger"
                             th:if="${#fields.hasErrors('gevoelOpwarming')}"></p>
@@ -69,28 +69,28 @@
                     </div>
                     <div class="section-main-right">
                         <div class="form-group1 mb-3">
-                            <label class="form-label" for="specifiekOnderdeel">De training:</label>
-                            <input class="form-control" id="specifiekOnderdeel" name="specifiekOnderdeel" placeholder="Welk soort training was het?" th:field="*{specifiekOnderdeel}" type="text" ></input>
-                            <p th:errors = "*{specifiekOnderdeel}" class="text-danger"
-                            th:if="${#fields.hasErrors('specifiekOnderdeel')}"></p>
+                            <label class="form-label" for="soortTraining">Welk soort training was het?</label>
+                            <input class="form-control" id="soortTraining" name="soortTraining" placeholder="" th:field="*{soortTraining}" type="text" ></input>
+                            <p th:errors = "*{soortTraining}" class="text-danger"
+                            th:if="${#fields.hasErrors('soortTraining')}"></p>
                         </div>
             
                         <div class="form-group2 mb-3">
-                            <label class="form-label" for="specifiekOnderdeellUitleg">De onderdelen van de training:</label>
+                            <label class="form-label" for="uitlegTraining">Wat was de training?</label>
                             <br>
-                            <textarea class="form-control" id="specifiekOnderdeellUitleg" name="specifiekOnderdeelUitleg" placeholder="Wat was de training?" th:field="*{specifiekOnderdeelUitleg}" type="text"></textarea>
+                            <textarea class="form-control" id="uitlegTraining" name="uitlegTraining" placeholder="" th:field="*{uitlegTraining}" type="text"></textarea>
                             <br>
-                            <p th:errors = "*{specifiekOnderdeelUitleg}" class="text-danger"
-                            th:if="${#fields.hasErrors('specifiekOnderdeelUitleg')}"></p>
+                            <p th:errors = "*{uitlegTraining}" class="text-danger"
+                            th:if="${#fields.hasErrors('uitlegTraining')}"></p>
                         </div>
             
                         <div class="form-group3 mb-3">
-                            <label class="form-label" for="gevoelSpecifiekOnderdeel">Het gevoel van de training:</label>
+                            <label class="form-label" for="gevoelTraining">Wat was jouw gevoel bij de training?</label>
                             <br>
-                            <input class="form-control" id="gevoelSpecifiekOnderdeel" name="gevoelSpecifiekOnderdeel" placeholder="Wat was jouw gevoel bij de opwarming?" th:field="*{gevoelSpecifiekOnderdeel}" type="text"></input>
+                            <input class="form-control" id="gevoelTraining" name="gevoelTraining" placeholder="" th:field="*{gevoelTraining}" type="text"></input>
                             <br>
-                            <p th:errors = "*{gevoelSpecifiekOnderdeel}" class="text-danger"
-                            th:if="${#fields.hasErrors('gevoelSpecifiekOnderdeel')}"></p>
+                            <p th:errors = "*{gevoelTraining}" class="text-danger"
+                            th:if="${#fields.hasErrors('gevoelTraining')}"></p>
                         </div>
                     </div>
                 </div>

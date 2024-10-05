@@ -15,9 +15,9 @@ public class TrainingDto {
         private String datum;
         private String opwarming;
         private String gevoelOpwarming;
-        private String specifiekOnderdeel;
-        private String gevoelSpecifiekOnderdeel;
-        private String specifiekOnderdeelUitleg;
+        private String soortTraining;
+        private String uitlegTraining;
+        private String gevoelTraining;
 //        private String trainer;
 //        private String feedback;
     }

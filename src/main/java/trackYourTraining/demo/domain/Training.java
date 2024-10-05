@@ -20,9 +20,9 @@ public class Training {
     private String datum;
     private String opwarming;
     private String gevoelOpwarming;
-    private String specifiekOnderdeel;
-    private String specifiekOnderdeelUitleg;
-    private String gevoelSpecifiekOnderdeel;
+    private String soortTraining;
+    private String uitlegTraining;
+    private String gevoelTraining;
 //    private String trainer;
 //    private String feedback;
 
